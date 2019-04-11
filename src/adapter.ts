@@ -77,6 +77,10 @@ const docToData = (input: ValueField[] | ValueField) => {
     return (input instanceof Array) ? input.map(obj => extractObject(obj)) : extractObject(input);
 }
 
+
+/**
+ * Converting a json object to Firestore document
+ */
 const dataToDoc = (input: Object) => {
     const isNull = (value: any) => value === null
     const isBoolean = (value: any) => typeof value === 'boolean'
